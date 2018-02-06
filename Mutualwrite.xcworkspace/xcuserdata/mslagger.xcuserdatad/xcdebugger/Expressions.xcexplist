@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PlotViewController.setPlot(plot:):PlotViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Plot.init(snap:):Plot.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NovelsProjectViewController.plotItemRef.getter:NovelsProjectViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NovelsProjectViewController.loadNovels():NovelsProjectViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PlotViewController.witeBeginningPlot(_:):PlotViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NovelsProjectViewController.setHighlightComment():NovelsProjectViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "comment.hightLightRange">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in NovelsProjectViewController.getComment():NovelsProjectViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "NovelEditViewController.prepare(for:sender:):NovelEditViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PlotItem.init(snap:):Plot.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in WritePlotViewController.observeContent():WritePlotViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

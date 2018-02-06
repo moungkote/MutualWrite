@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AddCommentDelegate: class {
+    func addComment(comment: String?, user: String)
+}
+
 class addCommentPopupViewController: UIViewController {
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -15,11 +19,17 @@ class addCommentPopupViewController: UIViewController {
     @IBOutlet weak var commentTextView: UITextView!
     
     @IBAction func post(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            
+            let user = "1234"
+            self.delegate?.addComment(comment: self.commentTextView.text, user: user)
+        })
     }
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    weak var delegate: AddCommentDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

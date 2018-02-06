@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eTW-Z4-9oN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="wez-ZN-bMr">
+            <objects>
+                <viewController id="eTW-Z4-9oN" customClass="LoginViewController" customModule="Mutualwrite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VLT-iC-mHt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdO-DN-uW4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_gp" translatesAutoresizingMaskIntoConstraints="NO" id="umI-H6-Fxv">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="290"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="eUl-gZ-d7m"/>
+                                            <constraint firstAttribute="height" constant="290" id="mCA-CX-v0j"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVR-9n-LQQ">
+                                        <rect key="frame" x="22" y="364" width="330" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.76623001810000002" blue="0.71932699850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="umI-H6-Fxv" firstAttribute="top" secondItem="AdO-DN-uW4" secondAttribute="top" id="F8G-4b-iX9"/>
+                                    <constraint firstAttribute="trailing" secondItem="umI-H6-Fxv" secondAttribute="trailing" id="Ohe-DM-HlI"/>
+                                    <constraint firstItem="umI-H6-Fxv" firstAttribute="leading" secondItem="AdO-DN-uW4" secondAttribute="leading" id="eNC-SM-MaU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AdO-DN-uW4" firstAttribute="leading" secondItem="ubJ-2B-sRx" secondAttribute="leading" id="AEB-5w-BOr"/>
+                            <constraint firstItem="ubJ-2B-sRx" firstAttribute="bottom" secondItem="AdO-DN-uW4" secondAttribute="bottom" id="NI6-Xf-yGz"/>
+                            <constraint firstItem="AdO-DN-uW4" firstAttribute="top" secondItem="ubJ-2B-sRx" secondAttribute="top" id="ZIz-is-5Mk"/>
+                            <constraint firstItem="ubJ-2B-sRx" firstAttribute="trailing" secondItem="AdO-DN-uW4" secondAttribute="trailing" id="oD6-fx-9gs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ubJ-2B-sRx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9G-xb-Um8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="108.39580209895054"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login_gp" width="282" height="249"/>
+    </resources>
+</document>

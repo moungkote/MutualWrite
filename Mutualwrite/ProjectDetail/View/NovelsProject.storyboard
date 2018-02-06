@@ -15,29 +15,39 @@
             <objects>
                 <viewController storyboardIdentifier="NovelsProjectViewControllerID" id="Sp5-y9-gh6" customClass="NovelsProjectViewController" customModule="Mutualwrite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sOT-xb-alQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szR-hN-obH">
-                                <rect key="frame" x="160" y="106" width="54" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szR-hN-obH">
+                                <rect key="frame" x="163" y="72" width="48" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ZCT-Kv-7kH">
-                                <rect key="frame" x="16" y="138" width="343" height="423"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ZCT-Kv-7kH">
+                                <rect key="frame" x="16" y="104" width="343" height="543"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Sp5-y9-gh6" id="pYd-rF-uF0"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZCT-Kv-7kH" firstAttribute="top" secondItem="szR-hN-obH" secondAttribute="bottom" constant="8" id="BjU-D0-jav"/>
+                            <constraint firstItem="9m4-Hd-S9c" firstAttribute="bottom" secondItem="ZCT-Kv-7kH" secondAttribute="bottom" constant="20" id="Rqv-78-XG4"/>
+                            <constraint firstItem="szR-hN-obH" firstAttribute="centerX" secondItem="sOT-xb-alQ" secondAttribute="centerX" id="Yl4-xq-VRj"/>
+                            <constraint firstItem="ZCT-Kv-7kH" firstAttribute="leading" secondItem="9m4-Hd-S9c" secondAttribute="leading" constant="16" id="cnj-H0-4AX"/>
+                            <constraint firstItem="szR-hN-obH" firstAttribute="top" secondItem="9m4-Hd-S9c" secondAttribute="top" constant="8" id="vcI-iN-24m"/>
+                            <constraint firstItem="9m4-Hd-S9c" firstAttribute="trailing" secondItem="ZCT-Kv-7kH" secondAttribute="trailing" constant="16" id="yCm-TS-ED1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9m4-Hd-S9c"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationItem key="navigationItem" id="Fer-7u-3VD"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="contentTextView" destination="ZCT-Kv-7kH" id="39G-Fz-7dX"/>
                         <outlet property="titleLabel" destination="szR-hN-obH" id="4Us-9d-hqM"/>
@@ -101,7 +111,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartQuotesType="no"/>
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +120,7 @@
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="0.83120184080000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="0.42238334760000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                 <real key="value" value="1"/>

@@ -10,7 +10,7 @@ import UIKit
 import HexColors
 
 class ProjectMasterViewController: UIViewController {
-
+    
     @IBOutlet weak var segmentControl: SPSegmentedControl!
     @IBOutlet weak var containerView: UIView!
     
@@ -32,15 +32,12 @@ class ProjectMasterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        navigationController?.navigationBar.barTintColor = UIColor("FFD55A")
-        navigationController?.navigationBar.shadowImage = UIImage()
-        segmentControl.layer.borderColor = UIColor("ecb032")?.cgColor
-        segmentControl.backgroundColor = UIColor("ecb032")
-        segmentControl.indicatorView.backgroundColor = UIColor("ffd464")
+        segmentControl.layer.borderColor = AppColor.dark_yellow.cgColor
+        segmentControl.backgroundColor = AppColor.dark_yellow.color
+        segmentControl.indicatorView.backgroundColor = AppColor.light_yellow.color
         segmentControl.styleDelegate = self
-
-
+        
+        
         //first segment control
         
         let xFirstCell = self.createCell(
@@ -51,7 +48,7 @@ class ProjectMasterViewController: UIViewController {
             text: "Idea",
             image: nil
         )
-
+        
         for cell in [xFirstCell, xSecondCell] {
             cell.layout = .textWithImage
             self.segmentControl.add(cell: cell)
@@ -59,7 +56,19 @@ class ProjectMasterViewController: UIViewController {
         
         selectSegment(at: 0)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barTintColor = AppColor.yellow.color
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? NovelEditViewController {
+            vc.project = sender as? Project
+        }
+    }
+    
     private func createCell(text: String, image: UIImage?) -> SPSegmentedControlCell {
         let cell = SPSegmentedControlCell.init()
         cell.label.text = text
@@ -73,7 +82,7 @@ class ProjectMasterViewController: UIViewController {
         projectViewController.view.isHidden = index == 0 ? false : true
         ideaViewController.view.isHidden = index == 1 ? false : true
     }
-
+    
 }
 
 // MARK: - SegmentControl
@@ -85,15 +94,15 @@ extension ProjectMasterViewController: SPSegmentControlCellStyleDelegate {
         selectSegment(at: index)
         
         UIView.transition(with: segmentControlCell.label, duration: 0.1, options: [.transitionCrossDissolve, .beginFromCurrentState], animations: {
-
+            
             segmentControlCell.label.textColor = UIColor.white
         }, completion: nil)
     }
     
     func normalState(segmentControlCell: SPSegmentedControlCell, forIndex index: Int) {
-
+        
         UIView.transition(with: segmentControlCell.label, duration: 0.1, options: [.transitionCrossDissolve, .beginFromCurrentState], animations: {
-
+            
             segmentControlCell.label.textColor = UIColor("ffcc48")
         }, completion: nil)
     }

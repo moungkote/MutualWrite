@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ProjectCollectionViewCell: UICollectionViewCell {
     
@@ -16,6 +17,11 @@ class ProjectCollectionViewCell: UICollectionViewCell {
     func setCell(project: Project) {
         
         projectNameLabel.text = project.title
-        projectImageView.image = project.image as? UIImage
+        if let imageString = project.imageURL {
+            if let imageURL = URL(string: imageString) {
+               self.projectImageView.af_setImage(withURL: imageURL)
+            }
+        }
+        
     }
 }

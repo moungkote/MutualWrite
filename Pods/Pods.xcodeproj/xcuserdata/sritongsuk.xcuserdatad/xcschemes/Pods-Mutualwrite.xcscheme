@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3E66204D26A607C875745F690890880"
+               BlueprintIdentifier = "102CCF505A9F338630559FFA393ACC82"
                BuildableName = "Pods_Mutualwrite.framework"
                BlueprintName = "Pods-Mutualwrite"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A3E66204D26A607C875745F690890880"
+            BlueprintIdentifier = "102CCF505A9F338630559FFA393ACC82"
             BuildableName = "Pods_Mutualwrite.framework"
             BlueprintName = "Pods-Mutualwrite"
             ReferencedContainer = "container:Pods.xcodeproj">

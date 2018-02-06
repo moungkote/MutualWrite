@@ -39,19 +39,21 @@ class ProjectViewController: UIViewController {
     }
     
     private func fetchProject() {
+      
+      guard let user = UserData.shared else { return }
+      
+      novelsRef.queryOrdered(byChild: "members/\(user.userId)/userId").queryEqual(toValue: user.userId).observe(.value) { (data) in
         
-        self.novlesRefHandle = novelsRef.queryOrderedByKey().observe(.value) { (data) in
-            
-            let dataSnapshotArray = data.children.allObjects as! [DataSnapshot]
-            
-            self.projectArray = dataSnapshotArray.map({ (data) -> Project in
-                
-                let projectData = data.value as! [String: String]
-                
-                let project = Project.getProjectArray(withDataSnapshot: projectData)
-                return project
-            })
-        }
+        let dataSnapshotArray = data.children.allObjects as! [DataSnapshot]
+        
+        self.projectArray = dataSnapshotArray.map({ (data) -> Project in
+          
+          return Project.init(withDataSnapshot: data)
+          
+        })
+        
+      }
+    
     }
 
 }
@@ -77,6 +79,14 @@ extension ProjectViewController: UICollectionViewDataSource {
         }
         
     }
+}
+
+extension ProjectViewController: UICollectionViewDelegate {
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+    parent?.performSegue(withIdentifier: "novelEdit", sender: self.projectArray[indexPath.item - 1])
+  }
 }
 
 extension ProjectViewController: UICollectionViewDelegateFlowLayout {

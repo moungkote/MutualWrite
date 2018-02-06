@@ -59,6 +59,7 @@
                     <connections>
                         <outlet property="containerView" destination="FKU-sr-RfA" id="Y5R-LR-EBr"/>
                         <outlet property="segmentControl" destination="J9e-nD-06n" id="0Or-Sp-kJm"/>
+                        <segue destination="YYZ-9d-tj6" kind="show" identifier="novelEdit" id="S8r-v0-Th9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oJ-tO-g88" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,8 +98,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfi-7e-U99">
-                                <rect key="frame" x="20" y="37" width="335" height="630"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfi-7e-U99">
+                                <rect key="frame" x="24" y="0.0" width="335" height="630"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="2.5" id="TjX-Co-Ms6">
                                     <size key="itemSize" width="100" height="177"/>
@@ -138,20 +139,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="177"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQV-Ji-0qi">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQV-Ji-0qi">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="CQV-Ji-0qi" secondAttribute="height" multiplier="100:140" id="FBK-HH-gub"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSG-qN-ZCR">
                                                     <rect key="frame" x="0.0" y="140" width="100" height="37"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scs-K9-6oW">
-                                                            <rect key="frame" x="29" y="0.0" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scs-K9-6oW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="29"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -177,6 +183,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="UCR-Bv-e65" id="bJO-Ch-6VQ"/>
+                                    <outlet property="delegate" destination="UCR-Bv-e65" id="fRD-63-5m2"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -203,7 +210,15 @@
                 <viewControllerPlaceholder storyboardName="CreateProject" id="zgF-at-qw9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzk-3F-uVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-287"/>
+            <point key="canvasLocation" x="1307" y="-297"/>
+        </scene>
+        <!--NovelEdit-->
+        <scene sceneID="DDf-mP-LLy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NovelEdit" id="YYZ-9d-tj6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9E-iu-XZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1306" y="-217"/>
         </scene>
     </scenes>
 </document>
